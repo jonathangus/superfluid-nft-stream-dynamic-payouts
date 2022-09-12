@@ -1,6 +1,5 @@
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
 import { DeployFunction } from 'hardhat-deploy/types';
-// import CashflowDeployment from 'web3-config/deployments/optimismKovan/Cashflow.json';
 import CashflowDeployment from 'web3-config/deployments/optimismGoerli/Cashflow.json';
 
 const name = 'MyNFT';
@@ -13,7 +12,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const erc20Symbol = 'TEST';
   const erc20Name = 'test';
-  // const domainManagerKovan = '0x4361d0F75A0186C05f971c566dC6bEa5957483fD';
   const domainManagerGoerli = '0x5086d1eEF304eb5284A0f6720f79403b4e9bE294';
 
   const deployment = await deploy(name, {

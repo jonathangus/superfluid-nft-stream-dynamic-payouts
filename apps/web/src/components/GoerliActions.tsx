@@ -1,8 +1,6 @@
 import { useAccount, useBalance } from 'wagmi';
 import { useContractRead, useContractWrite } from 'wagmi-lfg';
 import { MyNFT__factory } from 'web3-config';
-import Balance from './Balance';
-
 const GoerliActions = () => {
   const { address } = useAccount();
 
@@ -15,16 +13,6 @@ const GoerliActions = () => {
     args: [address, 1],
     onSuccessMessage: 'minted!',
   });
-
-  //   const balance = useBalance({
-  //     addressOrName: address,
-  //     token: '0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00',
-  //     watch: true,
-  //   });
-  //   const daiBalance = useBalance({
-  //     addressOrName: address,
-  //     token: '0x88271d333c72e51516b67f5567c728e702b3eee8',
-  //   });
 
   return (
     <div>

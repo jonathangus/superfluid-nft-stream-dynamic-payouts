@@ -85,9 +85,9 @@ const Page = () => {
           </button>
         )}
 
-        {isOptimism && (
+        {isOptimism && streams[0]?.currentFlowRate && (
           <div>
-            <OptimismActions flowRate={streams[0]?.currentFlowRate} />
+            <OptimismActions />
           </div>
         )}
         {isGoerli && <GoerliActions />}

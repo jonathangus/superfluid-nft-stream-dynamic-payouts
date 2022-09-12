@@ -10,9 +10,6 @@ import { useContractRead } from 'wagmi-lfg';
 import { Cashflow__factory } from 'web3-config';
 import Balance from './Balance';
 
-type Props = {
-  flowRate: any;
-};
 const OptimismActions = () => {
   const { address } = useAccount();
 
